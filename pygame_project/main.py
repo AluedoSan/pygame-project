@@ -1,7 +1,7 @@
 import pygame
 import sys
 
-# Inicialize o Pygame
+# Inicializando o Pygame
 pygame.init()
 pygame.mixer.init()  # Inicializa o mixer para tocar sons
 
@@ -14,7 +14,7 @@ PADDLE_HEIGHT = 100
 BALL_SPEED_X = 5
 BALL_SPEED_Y = 5
 PADDLE_SPEED = 10
-MAX_SCORE = 5  # Definindo o máximo de pontos para o jogo terminar
+MAX_SCORE = 7  # Definindo o máximo de pontos para o jogo terminar
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption("Ping Pong")
@@ -30,13 +30,13 @@ background_img = pygame.transform.scale(background_img, (SCREEN_WIDTH, SCREEN_HE
 ball_img = pygame.image.load("img/Plan-4.png")
 ball_img = pygame.transform.scale(ball_img, (BALL_RADIUS * 2, BALL_RADIUS * 2))  # Ajusta o tamanho da bola
 
-# Carregar sons
+# Carregando os sons
 hit_sound = pygame.mixer.Sound("music/au-michael.mp3")
 point_sound = pygame.mixer.Sound("music/hehe-michael.mp3")
 game_over_sound = pygame.mixer.Sound("music/rusbe-michael.mp3")
 background_music = "music/beatit.mp3"
 
-# Tocar música de fundo
+# Onde toca a música de fundo
 pygame.mixer.music.load(background_music)
 pygame.mixer.music.play(-1)  # -1 para tocar em loop
 
